@@ -974,7 +974,7 @@ class TFPreTrainedModel(tf.keras.Model, TFModelUtilsMixin):
         else:
             decoded = input_ids
 
-        return decoded
+        return decoded, next_token_logits
 
     def _generate_beam_search(
         self,
